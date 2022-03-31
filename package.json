@@ -5,5 +5,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yana Pass",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.7"
+  }
 }
