@@ -1,12 +1,8 @@
 import 'dotenv/config';
-import supertest from 'supertest';
+import AuthHelper from '../helpers/auth.helper'
 
-    before(async function () {
-        const request = await supertest(process.env.BASE_URL)
-        await request
-            .post('/auth')
-            .send({ login: process.env.LOGIN, password: process.env.PASSWORD})
-            .then(res => {
-                process.env['TOKEN'] = res.body.token
-            })
-    });
+before(async function () {
+    const authHelper = new AuthHelper()
+    await authHelper.login(process.env.LOGIN, process.env.PASSWORD)
+    process.env['TOKEN'] = authHelper.response.body.token
+});
