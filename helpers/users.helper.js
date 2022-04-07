@@ -30,10 +30,10 @@ class UsersHelper {
             })
     }
 
-    async delete(id) {
+    async delete(transId) {
         await supertest(process.env.BASE_URL)
             .delete('/users')
-            .send({ id: id })
+            .send({ id: transId })
             .set('Authorization', `Bearer${process.env.TOKEN}`)
             .then(res => {
                 this.response = res
