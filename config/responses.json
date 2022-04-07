@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "valid": {
+      "token": "dec5287e-5bd4-4abf-9bc9-2601184aef53"
+    },
+    "invalid": {
+      "message": "Wrong login or password."
+    }
+  },
+  "users": {
+    "create": {
+      "id": "bbc65bfe-27b2-42aa-801f-fec25e8e6be5",
+      "amount": 1000
+    }
+  }
+}
